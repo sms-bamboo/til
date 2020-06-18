@@ -1,8 +1,8 @@
-# Django Static 파일 위치 관련, DB Migration 방안
+# Django Static 파일 위치, DB Migration 작업
 
 ## 0. 작업
 Django 어플리케이션을 ElasticBeanstalk 에 배포하는데 일부 문제 사항이 있었다.  
-관련하여 알아낸 사항과 문제 사항 등을 기록하였다.  
+관련하여 운영 환경 배포에 필요한 내용을 정리하였다.  
 
 ## 1. static 파일
 개발환경에서는 runserver를 통해 로컬에서 프로젝트를 기동시켜볼 수 있다.  
