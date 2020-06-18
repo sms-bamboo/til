@@ -89,7 +89,7 @@ Could not load contenttypes.ContentType(pk=17): duplicate key value violates uni
 "django_content_type_a pp_label_model_76bd3d3b_uniq" 
 ````
 dump 시 다음과 같이 실행하여 필요없는 데이터를 제외해야 하는 것으로 보인다.  
-다만... 작업 대상자(K 부업) 가 작업 중단을 요청하여 직접 적용해보지 못해 안타깝다.. 아마 가능하지 않을까 싶다...
+다만... 담당자가 작업 중단을 요청하여 직접 적용해보지 못해 안타깝다.. 아마 가능하지 않을까 싶다...
 ````
 python manage.py dumpdata --natural-foreign --natural-primary --exclude contenttypes --exclude auth.permission --exclude admin.logentry --exclude sessions.session --indent 4 > db.json
 ````
