@@ -1,5 +1,7 @@
-# 200617 Django 배포
-Django 를 ElasticBeanstalk 에 배포하는데 일부 문제 사항이 있었다.  
+# Django Static 파일 위치 관련, DB Migration 방안
+
+## 0. 작업
+Django 어플리케이션을 ElasticBeanstalk 에 배포하는데 일부 문제 사항이 있었다.  
 관련하여 알아낸 사항과 문제 사항 등을 기록하였다.  
 
 ## 1. static 파일
