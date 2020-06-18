@@ -11,6 +11,7 @@ python manage.py runserver 0:8000
 막상 테스트가 완료되어 운영환경(nginx, wsgi)에 업로드하면 어플리케이션에서 static 파일을 찾지 못해 페이지가 정상동작하지 않는 경우가 있다. 이는 실제로 static 파일이 분산되어 있기 때문이다.  
   
 runserver 는 다양한 기능들이 있으며, 그 중 프로젝트 내 static 파일들을 알아서 모아주는 기능이 있다.  
+  
 때문에 runserver 실행 시에는 정상 동작하게 되는 것이며, 실제로는 분산된 static 파일을 collectstatic 을 통해 한 곳으로 파일을 모아주는 과정이 필요하다.  
     
 먼저 settings.py에 다음 변수를 추가한다.
@@ -88,8 +89,9 @@ django.db.utils.IntegrityError: Problem installing fixture 'C:..\lit\backups\dbb
 Could not load contenttypes.ContentType(pk=17): duplicate key value violates unique constraint 
 "django_content_type_a pp_label_model_76bd3d3b_uniq" 
 ````
+  
 dump 시 다음과 같이 실행하여 필요없는 데이터를 제외해야 하는 것으로 보인다.  
-다만... 담당자가 작업 중단을 요청하여 직접 적용해보지 못해 안타깝다.. 아마 가능하지 않을까 싶다...
+다만... 담당자가 작업 중단을 요청하여 직접 적용해보지 못해 안타깝다.. 아마 가능하지 않을까 싶다... (시도 요청한 상태)
 ````
 python manage.py dumpdata --natural-foreign --natural-primary --exclude contenttypes --exclude auth.permission --exclude admin.logentry --exclude sessions.session --indent 4 > db.json
 ````
