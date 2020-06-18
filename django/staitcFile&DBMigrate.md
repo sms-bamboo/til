@@ -1,17 +1,17 @@
 # 200617 Django 배포
-Django 를 ElasticBeanstalk 에 배포하는데 일부 문제 사항이 있었다.(K 부업)  
-관련하여 알아낸 사항과 문제 사항 등을 기록하였다.
+Django 를 ElasticBeanstalk 에 배포하는데 일부 문제 사항이 있었다.  
+관련하여 알아낸 사항과 문제 사항 등을 기록하였다.  
 
 ## 1. static 파일
-개발환경에서는 runserver를 통해 로컬에서 프로젝트를 기동시켜볼 수 있다.
+개발환경에서는 runserver를 통해 로컬에서 프로젝트를 기동시켜볼 수 있다.  
 ```
 python manage.py runserver 0:8000
 ```
 
-막상 테스트가 완료되어 운영환경에 업로드하면 어플리케이션에서 static 파일을 찾지 못하는 경우가 있다.  
-
-runserver 는 자동으로 프로젝트 내 static 파일들을 모아주는 기능이 있어 개발환경에서 runserver 실행 시 정상실행이 되지만,    
-실제로는 분산된 static 파일을 collectstatic 을 통해 한 곳으로 파일을 모아주는 과정이 필요한 것이다.  
+막상 테스트가 완료되어 운영환경(nginx, wsgi)에 업로드하면 어플리케이션에서 static 파일을 찾지 못해 페이지가 정상동작하지 않는 경우가 있다. 이는 실제로 static 파일이 분산되어 있기 때문이다.  
+  
+runserver 는 다양한 기능들이 있으며, 그 중 프로젝트 내 static 파일들을 알아서 모아주는 기능이 있다.  
+때문에 runserver 실행 시에는 정상 동작하게 되는 것이며, 실제로는 분산된 static 파일을 collectstatic 을 통해 한 곳으로 파일을 모아주는 과정이 필요하다.  
     
 먼저 settings.py에 다음 변수를 추가한다.
 
