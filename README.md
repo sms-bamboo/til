@@ -5,3 +5,6 @@
 
 ## Django
 - [운영 환경 배포를 위한 Static 파일 위치 및 DB 마이그레이션 작업](/django/staitcFileAndDBMigrate.md)
+
+## ElasticBeanstalk
+- [ElasticBeanstalk 배포 시 'no module named 'MySQLdb' 에러](/elasticBeanstalk/mysqlNoModuleError.md)
