@@ -48,7 +48,7 @@ query {
   }
 }
 query {
-	allTrails{
+  allTrails{
     name
     status
   }
@@ -63,7 +63,7 @@ query {
     name
     status
   }
-	allTrails{
+  allTrails{
     name
     status
   }
