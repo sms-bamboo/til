@@ -130,3 +130,36 @@ query {
   }
 }
 ````
+
+## 4. 필터링
+쿼리를 사용하면서 인자값을 같이 보내 결과 값을 필터링 할 수 있다. (조건 부여)  
+다음 쿼리를 실행하여 상태가 "CLOSED" 인 lift 만 가져올 수 있다.
+
+#### [쿼리]
+````
+query {
+  allLifts(status:CLOSED) {
+    name
+    status
+  }
+}
+
+````
+
+#### [결과]
+````
+{
+  "data": {
+    "lift": [
+      {
+        "liftName": "Astra Express",
+        "status": "CLOSED"
+      },
+      {
+        "liftName": "Jazz Cat",
+        "status": "OPEN"
+      }
+    ]
+  }
+}
+````
