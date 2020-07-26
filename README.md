@@ -14,4 +14,4 @@
 - [GraphQL Query](/graphql/query.md)
 
 ## AWS Security
-- [AWS KMS](/security/kms.md)
+- [AWS KMS 정리](/security/kms.md)
