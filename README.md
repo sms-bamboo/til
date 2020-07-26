@@ -15,3 +15,4 @@
 
 ## AWS Security
 - [AWS KMS 정리](/security/kms.md)
+- [Parameter Store,Secrets Manager 정리](/security/credentialsStore.md)
